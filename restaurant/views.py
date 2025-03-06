@@ -1,5 +1,6 @@
 from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render
 
 
-def say_welcome(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("Hello world")
+def index(request: HttpRequest) -> HttpResponse:
+    return render(request, "restaurant/index.html", {})

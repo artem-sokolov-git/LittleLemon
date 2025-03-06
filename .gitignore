@@ -11,3 +11,5 @@ wheels/
 
 # Django
 db.sqlite3
+/data
+rename_files.py
