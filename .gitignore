@@ -13,3 +13,6 @@ wheels/
 db.sqlite3
 /data
 rename_files.py
+
+# mysql
+*.env

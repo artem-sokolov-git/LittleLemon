@@ -1,0 +1,21 @@
+services:
+
+  mysql:
+    image: mysql:${VERSION}
+    container_name: ${CONTAINER_NAME}
+    environment:
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${USER}
+      MYSQL_PASSWORD: ${PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backup:/backup
+      - ./query:/query
+      # # SCRIPTS
+      # - ${RESTORE_DATABASE}
+    ports:
+      - ${PORT}:3306
+
+volumes:
+  mysql_data:
